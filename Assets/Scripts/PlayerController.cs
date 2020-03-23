@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour {
     public float playerSpeed = 1f;
     public float jumpForce = 4f;
 
+    public float playerScale = 1f;
+
     public float jumpCount;
     public float jumpTime = .2f;
 
@@ -21,6 +23,7 @@ public class PlayerController : MonoBehaviour {
     Rigidbody2D rb;
 
     void Start() {
+        playerScale = transform.localScale.x;
         isJumping = false;
         rb = GetComponent<Rigidbody2D>();
     }
@@ -32,29 +35,33 @@ public class PlayerController : MonoBehaviour {
     void Update() {
         onGround = Physics2D.OverlapCircle(feet.position, checkRadius, ground);
 
-        if(Input.GetAxisRaw("Horizontal")>0) {
-            transform.localScale = new Vector3(.1f, .1f, 1);
-        } else if(Input.GetAxisRaw("Horizontal") < 0) {
-            transform.localScale = new Vector3(-.1f, .1f, 1);
+        if (Input.GetAxisRaw("Horizontal") > 0) {
+            transform.localScale = new Vector3(playerScale, playerScale, 1);
+        } else if (Input.GetAxisRaw("Horizontal") < 0) {
+            transform.localScale = new Vector3(-playerScale, playerScale, 1);
         }
 
-        if(onGround && Input.GetAxisRaw("Horizontal")!=0) {
+        if (onGround && Input.GetAxisRaw("Horizontal") != 0) {
             GetComponent<PlayerMovementSounds>().playRunSound();
         } else {
             GetComponent<PlayerMovementSounds>().stopRunSound();
         }
 
-        if(onGround && Input.GetAxisRaw("Vertical") > 0) {
+        if (rb.velocity.y < 0) {
+            rb.velocity -= rb.gravityScale * Vector2.up * playerScale / 3;
+        }
+
+        if (onGround && Input.GetAxisRaw("Vertical") > 0) {
             isJumping = true;
             jumpCount = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
             GetComponent<PlayerMovementSounds>().playJumpSound();
-        } else if(onGround) {
+        } else if (onGround) {
             GetComponent<PlayerMovementSounds>().stopJumpSound();
         }
 
-        if(Input.GetAxisRaw("Vertical")>0 && isJumping) {
-            if(jumpCount > 0) {
+        if (Input.GetAxisRaw("Vertical") > 0 && isJumping) {
+            if (jumpCount > 0) {
                 rb.velocity = jumpForce * Vector2.up;
                 jumpCount -= Time.deltaTime;
             } else {
@@ -62,7 +69,7 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
-        if(Input.GetAxisRaw("Vertical")>0) {
+        if (Input.GetAxisRaw("Vertical") > 0) {
             isJumping = false;
         }
     }

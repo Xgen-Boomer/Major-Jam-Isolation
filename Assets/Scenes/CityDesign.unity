@@ -332,9 +332,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315908281}
-  m_LocalRotation: {x: 0, y: 0, z: 0.0016825921, w: 0.9999986}
-  m_LocalPosition: {x: 1.3986129, y: 3.8323035, z: -0.002}
-  m_LocalScale: {x: 1, y: 1.0000001, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.04339694, w: 0.99905795}
+  m_LocalPosition: {x: 63.76443, y: 3.4201415, z: -0.002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2118886622}
   m_RootOrder: 2
@@ -411,9 +411,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 477793234}
-  m_LocalRotation: {x: 0, y: 0, z: -0.0000000141235486, w: 1}
-  m_LocalPosition: {x: 1.010991, y: 13.810301, z: -0.006}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.12697506, w: 0.9919059}
+  m_LocalPosition: {x: 66.31551, y: 13.941345, z: -0.006}
+  m_LocalScale: {x: 1, y: 0.9999998, z: 1}
   m_Children: []
   m_Father: {fileID: 2118886622}
   m_RootOrder: 6
@@ -945,9 +945,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 928353362}
-  m_LocalRotation: {x: 0, y: 0, z: 0.6726557, w: 0.7399556}
-  m_LocalPosition: {x: 0.88415295, y: 7.4914947, z: -0.001}
-  m_LocalScale: {x: 0.99999994, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.021000875, w: 0.99977946}
+  m_LocalPosition: {x: 64.639946, y: 7.470603, z: -0.001}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
   m_Children: []
   m_Father: {fileID: 2118886622}
   m_RootOrder: 1
@@ -1126,6 +1126,36 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &973068092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 973068093}
+  m_Layer: 0
+  m_Name: Feet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &973068093
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973068092}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.05, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2118886622}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &991581010
 GameObject:
   m_ObjectHideFlags: 0
@@ -1152,7 +1182,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991581010}
   m_LocalRotation: {x: 0, y: 0, z: -0.00000607858, w: 1}
-  m_LocalPosition: {x: -0.053862557, y: 10.335646, z: -0.003}
+  m_LocalPosition: {x: 65.22894, y: 10.439245, z: -0.003}
   m_LocalScale: {x: 1, y: 0.99999994, z: 1}
   m_Children: []
   m_Father: {fileID: 2118886622}
@@ -1230,9 +1260,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1036470104}
-  m_LocalRotation: {x: 0, y: 0, z: 0.114859134, w: 0.9933818}
-  m_LocalPosition: {x: 1.308257, y: 9.761186, z: -0.004}
-  m_LocalScale: {x: 0.6268, y: 0.62680006, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.28554633, w: 0.9583649}
+  m_LocalPosition: {x: 67.07215, y: 10.28491, z: -0.004}
+  m_LocalScale: {x: 0.62679994, y: 0.6268001, z: 1}
   m_Children: []
   m_Father: {fileID: 2118886622}
   m_RootOrder: 4
@@ -1377,7 +1407,7 @@ GameObject:
   - component: {fileID: 1085080426}
   - component: {fileID: 1085080425}
   - component: {fileID: 1085080427}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: groundSideWalk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1870,9 +1900,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1315179629}
-  m_LocalRotation: {x: 0, y: 0, z: 0.000033965705, w: 1}
-  m_LocalPosition: {x: 0.8119304, y: 13.082966, z: -0.0050000004}
-  m_LocalScale: {x: 0.37660003, y: 0.3766, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.0089544, w: 0.99995995}
+  m_LocalPosition: {x: 66.10439, y: 13.183729, z: -0.0050000004}
+  m_LocalScale: {x: 0.3766, y: 0.3766, z: 1}
   m_Children: []
   m_Father: {fileID: 2118886622}
   m_RootOrder: 5
@@ -2226,9 +2256,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1673007537}
-  m_LocalRotation: {x: 0, y: 0, z: 0.33455056, w: 0.9423778}
-  m_LocalPosition: {x: 2.5181751, y: 10.608228, z: 0}
-  m_LocalScale: {x: 0.62679994, y: 0.6268001, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7332128, w: 0.67999923}
+  m_LocalPosition: {x: 64.08733, y: 11.337149, z: 0}
+  m_LocalScale: {x: 0.6268, y: 0.62680006, z: 1}
   m_Children: []
   m_Father: {fileID: 2118886622}
   m_RootOrder: 0
@@ -2422,9 +2452,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1835289679}
-  m_LocalRotation: {x: 0, y: 0, z: 0.0016957616, w: 0.99999857}
-  m_LocalPosition: {x: -0.6281344, y: 3.1366053, z: -0.007}
-  m_LocalScale: {x: 0.99999994, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.21942653, w: 0.97562903}
+  m_LocalPosition: {x: 66.59423, y: 3.5378926, z: -0.007}
+  m_LocalScale: {x: 0.9999999, y: 1.0000001, z: 1}
   m_Children: []
   m_Father: {fileID: 2118886622}
   m_RootOrder: 7
@@ -2747,9 +2777,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2057779787}
-  m_LocalRotation: {x: 0, y: 0, z: 0.33256215, w: 0.9430813}
-  m_LocalPosition: {x: -0.23515068, y: 7.1602263, z: -0.008}
-  m_LocalScale: {x: 0.99999976, y: 1.0000001, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.47393867, w: 0.88055784}
+  m_LocalPosition: {x: 65.414505, y: 7.4445443, z: -0.008}
+  m_LocalScale: {x: 0.9999998, y: 1.0000001, z: 1}
   m_Children: []
   m_Father: {fileID: 2118886622}
   m_RootOrder: 8
@@ -2929,6 +2959,7 @@ GameObject:
   - component: {fileID: 2118886625}
   - component: {fileID: 2118886624}
   - component: {fileID: 2118886623}
+  - component: {fileID: 2118886627}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Untagged
@@ -2955,7 +2986,7 @@ MonoBehaviour:
   bonesRoot: {fileID: 0}
   unityBones: []
   boneHierarchy: 0
-  animationName: idle
+  animationName: walking
   _playTimes: 0
   _timeScale: 1
   _sortingMode: 0
@@ -2985,6 +3016,7 @@ Transform:
   - {fileID: 1835289680}
   - {fileID: 2057779788}
   - {fileID: 2066375258}
+  - {fileID: 973068093}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3009,9 +3041,9 @@ MonoBehaviour:
   checkRadius: 0.1
   ground:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
   onGround: 1
-  feet: {fileID: 0}
+  feet: {fileID: 973068093}
 --- !u!114 &2118886624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3024,8 +3056,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67e57fbbfdb0edb4faed253e0f40eee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpSound: {fileID: 0}
-  RunSound: {fileID: 0}
+  JumpSound: {fileID: 943386091}
+  RunSound: {fileID: 724082267}
 --- !u!50 &2118886625
 Rigidbody2D:
   serializedVersion: 4
@@ -3060,7 +3092,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.76765835, y: 7.55994}
+  m_Offset: {x: 0.57282186, y: 7.597201}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3071,5 +3103,24 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.3963566, y: 15.610488}
+  m_Size: {x: 4.7860293, y: 15.181951}
   m_EdgeRadius: 0
+--- !u!95 &2118886627
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118886620}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -38,10 +38,19 @@ public class PlayerController : MonoBehaviour {
             transform.localScale = new Vector3(-.1f, .1f, 1);
         }
 
+        if(onGround && Input.GetAxisRaw("Horizontal")!=0) {
+            GetComponent<PlayerMovementSounds>().playRunSound();
+        } else {
+            GetComponent<PlayerMovementSounds>().stopRunSound();
+        }
+
         if(onGround && Input.GetAxisRaw("Vertical") > 0) {
             isJumping = true;
             jumpCount = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
+            GetComponent<PlayerMovementSounds>().playJumpSound();
+        } else if(onGround) {
+            GetComponent<PlayerMovementSounds>().stopJumpSound();
         }
 
         if(Input.GetAxisRaw("Vertical")>0 && isJumping) {

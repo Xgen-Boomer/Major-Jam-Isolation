@@ -8,6 +8,11 @@ public class PlayerMovementSounds : MonoBehaviour {
     public AudioSource RunSound;
     public AudioSource[] feetSounds;
 
+    private void Update() {
+        feetSounds[0].pitch = GetComponent<PlayerController>().speedMult;
+        feetSounds[1].pitch = GetComponent<PlayerController>().speedMult;
+    }
+
     public void playJumpSound() {
         if(!JumpSound.isPlaying) {
             JumpSound.Play();
@@ -23,7 +28,7 @@ public class PlayerMovementSounds : MonoBehaviour {
     public IEnumerator playRunSound() {
         if (!feetSounds[0].isPlaying && !feetSounds[1].isPlaying) {
             feetSounds[Random.Range(0, 2)].Play();
-            yield return new WaitForSeconds(.15f);
+            yield return new WaitForSeconds(.125f);
             feetSounds[Random.Range(0, 2)].Play();
         }
     }

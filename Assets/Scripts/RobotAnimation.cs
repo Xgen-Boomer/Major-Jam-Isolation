@@ -30,9 +30,8 @@ public class RobotAnimation : MonoBehaviour
         armatureComponent.animation.FadeIn ("idle", 0.25f, -1);
     }
 
-    void Update()
-    {
-        
+    void Update() {
+        armatureComponent.animation.timeScale = GetComponent<PlayerController>().speedMult;
     }
 
     public void goIdle() {

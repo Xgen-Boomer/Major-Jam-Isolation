@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour {
     public float playerSpeed = 1f;
     public float jumpForce = 4f;
 
+    public float speedMult = 1;
+
     public float playerScale = 1f;
 
     public float jumpCount;
@@ -34,7 +36,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        rb.velocity = new Vector2(playerSpeed * Input.GetAxisRaw("Horizontal"), rb.velocity.y);
+        rb.velocity = new Vector2(playerSpeed * speedMult * Input.GetAxisRaw("Horizontal"), rb.velocity.y);
     }
 
     void Update() {
@@ -57,7 +59,13 @@ public class PlayerController : MonoBehaviour {
             if(isRunning) {
                 GetComponent<RobotAnimation>().goRun();
             }
+            if (Input.GetKey(KeyCode.LeftShift)) {
+                speedMult = 2;
+            } else {
+                speedMult = 1;
+            }
         } else {
+            speedMult = 1;
             GetComponent<PlayerMovementSounds>().stopRunSound();
         }
 

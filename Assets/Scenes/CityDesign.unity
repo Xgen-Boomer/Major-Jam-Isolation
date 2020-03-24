@@ -3317,6 +3317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 6
   jumpForce: 10
+  speedMult: 1
   playerScale: 1
   jumpCount: 0
   jumpTime: 0.2

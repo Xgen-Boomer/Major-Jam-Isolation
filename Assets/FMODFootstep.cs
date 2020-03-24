@@ -2,39 +2,45 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FMODFootstep : MonoBehaviour
-{
+public class FMODFootstep : MonoBehaviour {
     [FMODUnity.EventRef]
     public string inputsound;
     bool isRunning;
     public float playerSpeed;
 
-    void Update ()
-	{
-        if (Input.GetAxis ("Horizontal") >= 0.01f || Input.GetAxis ("Horizontal") <= -0.01f)
-		{
+    void Update() {
+        playerSpeed = .5f / GetComponent<PlayerController>().speedMult;
+        if (Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal") != 0) {
             isRunning = true;
-
-        }
-        else if (Input.GetAxis ("Horizontal") == 0)
-		{
+        } else {
             isRunning = false;
         }
-  }
-    void CallFootsteps ()
-	{
-        if (isRunning == true)
-		{
+        if (isRunning) {
+            if (Input.GetKeyDown(KeyCode.LeftShift)) {
+                CancelInvoke("CallFootsteps");
+                InvokeRepeating("CallFootsteps", 0, playerSpeed);
+            }
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift)) {
+            CancelInvoke("CallFootsteps");
+            InvokeRepeating("CallFootsteps", 0, playerSpeed);
+        }
+        if (!GetComponent<PlayerController>().isJumpUp || !GetComponent<PlayerController>().isJumpDown) {
+            isRunning = false;
+        }
+    }
+    void CallFootsteps() {
+        if (isRunning) {
             FMODUnity.RuntimeManager.PlayOneShot(inputsound);
         }
-	}
-    void Start ()
-	{
+    }
+    void Start() {
+        playerSpeed = .5f;
+        isRunning = false;
         InvokeRepeating("CallFootsteps", 0, playerSpeed);
-	}
+    }
 
-    void onDisable ()
-	{
+    void onDisable() {
         isRunning = false;
     }
 }

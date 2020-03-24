@@ -123,10 +123,11 @@
     <Compile Include="Assets\DragonBones\Scripts\unity\UnityTextureData.cs" />
     <Compile Include="Assets\DragonBones\Scripts\unity\UnityUGUIDisplay.cs" />
     <Compile Include="Assets\EffectExamples\Misc Effects\Scripts\SpawnEffect.cs" />
+    <Compile Include="Assets\FMODFootstep.cs" />
+    <Compile Include="Assets\FMODJump.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovementSounds.cs" />
     <Compile Include="Assets\Scripts\RobotAnimation.cs" />
     <Compile Include="Assets\Shared\Ramps\Runtime\RampAsset.cs" />
     <Compile Include="Assets\Shared\Scripts\AdjustTimeScale.cs" />
@@ -153,6 +154,7 @@
     <None Include="Assets\FMOD\isolation\Metadata\Master.xml" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\DragonBones\Resources\Shaders\DB_BlendMode_UIFramebuffer.shader" />
+    <None Include="Assets\FMOD\isolation\Metadata\AudioFile\{8bb87743-5184-426b-bc4c-24f651b548c2}.xml" />
     <None Include="Assets\DragonBones\Resources\Shaders\DB_BlendMode_UIGrab.shader" />
     <None Include="Assets\DragonBones\Resources\Shaders\DB_BlendMode_Framebuffer.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
@@ -160,11 +162,14 @@
     <None Include="Assets\FMOD\isolation\Metadata\Bank\{1474e53a-8d0a-4eb4-8f51-277df7b9556c}.xml" />
     <None Include="Assets\FMOD\isolation\Metadata\Tags.xml" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\FMOD\isolation\Metadata\AudioFile\{f1e2de3d-da05-4c94-95cc-6db37db7de1e}.xml" />
     <None Include="Assets\FMOD\isolation\Metadata\BankFolder\{6183d6c4-e8ee-4ae8-8e9c-e4ea26b5c3f7}.xml" />
     <None Include="Assets\DragonBones\Resources\Shaders\DB_BlendMode_Grab.shader" />
     <None Include="Assets\FMOD\isolation\Metadata\ParameterPresetFolder\{2c345e6e-4532-4349-84f3-0f25ae4333a3}.xml" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\EffectExamples\Misc Effects\Shaders\FireFly.shader" />
+    <None Include="Assets\FMOD\isolation\Metadata\AudioFile\{5c8b62b8-4e9d-44ed-9228-bb38f28d7256}.xml" />
+    <None Include="Assets\FMOD\isolation\Metadata\Event\{99da1ad1-3f4c-49e9-bf4b-bb12efe5b013}.xml" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\FMOD\isolation\Metadata\Workspace.xml" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />

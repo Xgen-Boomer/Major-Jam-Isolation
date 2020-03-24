@@ -6,35 +6,20 @@ public class FMODJump : MonoBehaviour
 {
     [FMODUnity.EventRef]
     public string inputsound;
-    bool isJumping;
+    public bool isJumping = false;
     public float jumpForce;
 
-    void Update()
-    {
-        if (Input.GetAxis("Vertical") > 0f || Input.GetAxis("Vertical") < -0f)
-        {
-            isJumping = true;
-
-        }
-        else if (Input.GetAxis("Vertical") == 0)
-        {
-            isJumping = false;
-        }
-    }
-    void CallJump()
-    {
-        if (isJumping == true)
-        {
+    void CallJump() {
+        if(isJumping) {
             FMODUnity.RuntimeManager.PlayOneShot(inputsound);
         }
     }
-    void Start()
-    {
+    void Start() {
+        isJumping = false;
         InvokeRepeating("CallJump", 0, jumpForce);
     }
 
-    void onDisable()
-    {
+    void onDisable() {
         isJumping = false;
     }
 }

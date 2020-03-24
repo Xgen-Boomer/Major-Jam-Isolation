@@ -49,13 +49,12 @@ public class PlayerController : MonoBehaviour {
         }
 
         if(Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0) {
-            if(isIdle) {
+            if(isIdle && onGround) {
                 GetComponent<RobotAnimation>().goIdle();
             }
         }
 
         if (onGround && Input.GetAxisRaw("Horizontal") != 0) {
-            StartCoroutine(GetComponent<PlayerMovementSounds>().playRunSound());
             if(isRunning) {
                 GetComponent<RobotAnimation>().goRun();
             }
@@ -66,7 +65,6 @@ public class PlayerController : MonoBehaviour {
             }
         } else {
             speedMult = 1;
-            GetComponent<PlayerMovementSounds>().stopRunSound();
         }
 
         if (rb.velocity.y < 0) {
@@ -80,9 +78,6 @@ public class PlayerController : MonoBehaviour {
             if(isJumpUp) {
                 GetComponent<RobotAnimation>().goJumpUp();
             }
-            GetComponent<PlayerMovementSounds>().playJumpSound();
-        } else if (onGround) {
-            GetComponent<PlayerMovementSounds>().stopJumpSound();
         }
 
         if (Input.GetAxisRaw("Vertical") > 0 && isJumping) {

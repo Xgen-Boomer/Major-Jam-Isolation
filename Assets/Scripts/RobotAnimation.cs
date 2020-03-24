@@ -36,6 +36,7 @@ public class RobotAnimation : MonoBehaviour
 
     public void goIdle() {
         armatureComponent.animation.FadeIn("idle", .25f, -1);
+        GetComponent<FMODJump>().isJumping = false;
         GetComponent<PlayerController>().isIdle = false;
         GetComponent<PlayerController>().isRunning = true;
         GetComponent<PlayerController>().isJumpUp = true;
@@ -44,6 +45,7 @@ public class RobotAnimation : MonoBehaviour
 
     public void goRun() {
         armatureComponent.animation.FadeIn("RunPlace", .25f, -1);
+        GetComponent<FMODJump>().isJumping = false;
         GetComponent<PlayerController>().isIdle = true;
         GetComponent<PlayerController>().isRunning = false;
         GetComponent<PlayerController>().isJumpUp = true;
@@ -52,14 +54,16 @@ public class RobotAnimation : MonoBehaviour
 
     public void goJumpUp() {
         armatureComponent.animation.FadeIn("JumpUp", .25f, 1);
+        GetComponent<FMODJump>().isJumping = true;
         GetComponent<PlayerController>().isIdle = true;
         GetComponent<PlayerController>().isRunning = true;
-        GetComponent<PlayerController>().isJumpUp = false;
         GetComponent<PlayerController>().isJumpDown = true;
+        GetComponent<PlayerController>().isJumpUp = false;
     }
 
     public void goJumpDown() {
         armatureComponent.animation.FadeIn("JumpDown", .25f, 1);
+        GetComponent<FMODJump>().isJumping = true;
         GetComponent<PlayerController>().isIdle = true;
         GetComponent<PlayerController>().isRunning = true;
         GetComponent<PlayerController>().isJumpUp = true;

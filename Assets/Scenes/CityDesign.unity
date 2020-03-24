@@ -3390,4 +3390,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af64fa4dc1cd094991d4a38250eb238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragonBoneData: {fileID: 11400000, guid: b7e28ddb4e394e14ca276f1e828050e2, type: 2}

@@ -22,14 +22,11 @@ using DragonBones;
 public class RobotAnimation : MonoBehaviour
 {
 
-    public UnityDragonBonesData dragonBoneData;
+    private UnityArmatureComponent armatureComponent;
     // Start is called before the first frame update
     void Start()
     {
-        UnityFactory.factory.autoSearch = true;
-        UnityFactory.factory.LoadData(dragonBoneData);
-
-        var armatureComponent = UnityFactory.factory.BuildArmatureComponent("Robot");
+        armatureComponent = transform.GetComponentInChildren<UnityArmatureComponent>();
         armatureComponent.animation.FadeIn ("idle", 0.25f, -1);
 
     }

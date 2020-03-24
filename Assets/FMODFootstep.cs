@@ -11,12 +11,12 @@ public class FMODFootstep : MonoBehaviour
 
     void Update ()
 	{
-        if (Input.GetAxis ("Vertical") >= 0.01f || Input.GetAxis ("Horizontal") >= 0.01f || Input.GetAxis ("Vertical") <= -0.01f || Input.GetAxis ("Horizontal") <= -0.01f)
+        if (Input.GetAxis ("Horizontal") >= 0.01f || Input.GetAxis ("Horizontal") <= -0.01f)
 		{
             isRunning = true;
 
         }
-        else if (Input.GetAxis ("Vertical") == 0 || Input.GetAxis ("Horizontal") == 0)
+        else if (Input.GetAxis ("Horizontal") == 0)
 		{
             isRunning = false;
         }

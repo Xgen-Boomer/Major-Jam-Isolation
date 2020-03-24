@@ -149,7 +149,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175178182}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &175178184
 Camera:
   m_ObjectHideFlags: 0
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175178182}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
   m_Name: 
@@ -3141,6 +3141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2114792785}
   - component: {fileID: 2114792784}
+  - component: {fileID: 2114792786}
   m_Layer: 0
   m_Name: RightFootSound
   m_TagString: Untagged
@@ -3258,6 +3259,29 @@ Transform:
   m_Father: {fileID: 2066375258}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2114792786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114792783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Footsteps
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &2118886620
 GameObject:
   m_ObjectHideFlags: 0
@@ -3274,6 +3298,7 @@ GameObject:
   - component: {fileID: 2118886623}
   - component: {fileID: 2118886627}
   - component: {fileID: 2118886628}
+  - component: {fileID: 2118886629}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Untagged
@@ -3370,7 +3395,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2118886620}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67e57fbbfdb0edb4faed253e0f40eee8, type: 3}
   m_Name: 
@@ -3379,7 +3404,7 @@ MonoBehaviour:
   RunSound: {fileID: 724082267}
   feetSounds:
   - {fileID: 1337117427}
-  - {fileID: 2114792784}
+  - {fileID: 1337117427}
 --- !u!50 &2118886625
 Rigidbody2D:
   serializedVersion: 4
@@ -3454,3 +3479,17 @@ MonoBehaviour:
   health: 2
   spawnPoint: {fileID: 1597870641}
   ground: {fileID: 1085080426}
+--- !u!114 &2118886629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118886620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99b06711c7b4b4bd8920f9a82efbf8d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputsound: event:/Footsteps
+  playerSpeed: 0.5

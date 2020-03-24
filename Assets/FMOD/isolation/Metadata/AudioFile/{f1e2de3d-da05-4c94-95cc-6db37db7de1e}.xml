@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{f1e2de3d-da05-4c94-95cc-6db37db7de1e}">
+		<property name="assetPath">
+			<value>Left Foot.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.76074829931972787</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{37af8dcd-43e6-4a05-83cf-0edcfe14aa12}</destination>
+		</relationship>
+	</object>
+</objects>

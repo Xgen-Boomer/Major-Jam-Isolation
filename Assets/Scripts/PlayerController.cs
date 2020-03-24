@@ -42,7 +42,8 @@ public class PlayerController : MonoBehaviour {
         }
 
         if (onGround && Input.GetAxisRaw("Horizontal") != 0) {
-            GetComponent<PlayerMovementSounds>().playRunSound();
+            StartCoroutine(GetComponent<PlayerMovementSounds>().playRunSound());
+            //GetComponent<>
         } else {
             GetComponent<PlayerMovementSounds>().stopRunSound();
         }

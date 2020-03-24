@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/CityDesign.unity
+- path: Assets/Scenes/Greyboxed level.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

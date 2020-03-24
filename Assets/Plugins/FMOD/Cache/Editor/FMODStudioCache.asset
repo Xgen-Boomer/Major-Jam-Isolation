@@ -90,6 +90,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-8228946439012286687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/isolation/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637206611810183332
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-7532692885843015500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,7 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/FMOD/isolation/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637206628430000000
+  lastModified: 637206611810233312
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -161,7 +179,7 @@ MonoBehaviour:
   Path: event:/Jumping
   guid: 8df99a0a21183249adfb26cc3aa1b080
   Banks:
-  - {fileID: 7876296108797549117}
+  - {fileID: -8228946439012286687}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -327,16 +345,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -5842590091588562605}
-  - {fileID: 7876296108797549117}
+  - {fileID: -8228946439012286687}
   EditorEvents:
   - {fileID: 8081665333980021371}
   - {fileID: -4268764053736172302}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 7876296108797549117}
+  - {fileID: -8228946439012286687}
   StringsBanks:
   - {fileID: -5842590091588562605}
-  stringsBankWriteTime: 637206628430000000
+  stringsBankWriteTime: 637206611810233312
   cacheVersion: 3
 --- !u!114 &579148443317148586
 MonoBehaviour:
@@ -553,7 +571,7 @@ MonoBehaviour:
   lastModified: 637206628430000000
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &8081665333980021371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -569,7 +587,7 @@ MonoBehaviour:
   Path: event:/Footsteps
   guid: d11ada994c3fe949bf4bbb12efe5b013
   Banks:
-  - {fileID: 7876296108797549117}
+  - {fileID: -8228946439012286687}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1

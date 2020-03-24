@@ -12,6 +12,11 @@ public class PlayerController : MonoBehaviour {
     public float jumpCount;
     public float jumpTime = .2f;
 
+    public bool isIdle = true;
+    public bool isRunning = true;
+    public bool isJumpUp = true;
+    public bool isJumpDown = true;
+
     public bool isJumping = false;
 
     public float checkRadius = .025f;
@@ -41,9 +46,17 @@ public class PlayerController : MonoBehaviour {
             transform.localScale = new Vector3(-playerScale, playerScale, 1);
         }
 
+        if(Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0) {
+            if(isIdle) {
+                GetComponent<RobotAnimation>().goIdle();
+            }
+        }
+
         if (onGround && Input.GetAxisRaw("Horizontal") != 0) {
             StartCoroutine(GetComponent<PlayerMovementSounds>().playRunSound());
-            //GetComponent<>
+            if(isRunning) {
+                GetComponent<RobotAnimation>().goRun();
+            }
         } else {
             GetComponent<PlayerMovementSounds>().stopRunSound();
         }
@@ -56,6 +69,9 @@ public class PlayerController : MonoBehaviour {
             isJumping = true;
             jumpCount = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
+            if(isJumpUp) {
+                GetComponent<RobotAnimation>().goJumpUp();
+            }
             GetComponent<PlayerMovementSounds>().playJumpSound();
         } else if (onGround) {
             GetComponent<PlayerMovementSounds>().stopJumpSound();
@@ -67,6 +83,12 @@ public class PlayerController : MonoBehaviour {
                 jumpCount -= Time.deltaTime;
             } else {
                 isJumping = false;
+            }
+        }
+
+        if(!onGround && rb.velocity.y<0) {
+            if(isJumpDown) {
+                GetComponent<RobotAnimation>().goJumpDown();
             }
         }
 

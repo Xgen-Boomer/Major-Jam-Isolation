@@ -28,12 +28,42 @@ public class RobotAnimation : MonoBehaviour
     {
         armatureComponent = transform.GetComponentInChildren<UnityArmatureComponent>();
         armatureComponent.animation.FadeIn ("idle", 0.25f, -1);
-
     }
 
-    // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void goIdle() {
+        armatureComponent.animation.FadeIn("idle", .25f, -1);
+        GetComponent<PlayerController>().isIdle = false;
+        GetComponent<PlayerController>().isRunning = true;
+        GetComponent<PlayerController>().isJumpUp = true;
+        GetComponent<PlayerController>().isJumpDown = true;
+    }
+
+    public void goRun() {
+        armatureComponent.animation.FadeIn("RunPlace", .25f, -1);
+        GetComponent<PlayerController>().isIdle = true;
+        GetComponent<PlayerController>().isRunning = false;
+        GetComponent<PlayerController>().isJumpUp = true;
+        GetComponent<PlayerController>().isJumpDown = true;
+    }
+
+    public void goJumpUp() {
+        armatureComponent.animation.FadeIn("JumpUp", .25f, 1);
+        GetComponent<PlayerController>().isIdle = true;
+        GetComponent<PlayerController>().isRunning = true;
+        GetComponent<PlayerController>().isJumpUp = false;
+        GetComponent<PlayerController>().isJumpDown = true;
+    }
+
+    public void goJumpDown() {
+        armatureComponent.animation.FadeIn("JumpDown", .25f, 1);
+        GetComponent<PlayerController>().isIdle = true;
+        GetComponent<PlayerController>().isRunning = true;
+        GetComponent<PlayerController>().isJumpUp = true;
+        GetComponent<PlayerController>().isJumpDown = false;
     }
 }

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/GameArt/Background things/Background Tiles/background tile 1.png.meta
 guid: 1325aa4bac1e246e5b9b90c4b4b1edeb
+=======
+guid: 6ac8b47201c95de47afbb8f30bc0d7b4
+>>>>>>> 79e73525451229141ab2957db4e457ce7d8834da:Assets/GameArt/Background Tiles/background tile 1.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

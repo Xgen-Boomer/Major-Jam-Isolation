@@ -123,6 +123,7 @@
     <Compile Include="Assets\DragonBones\Scripts\unity\UnityTextureData.cs" />
     <Compile Include="Assets\DragonBones\Scripts\unity\UnityUGUIDisplay.cs" />
     <Compile Include="Assets\EffectExamples\Misc Effects\Scripts\SpawnEffect.cs" />
+    <Compile Include="Assets\FMODDeath.cs" />
     <Compile Include="Assets\FMODFootstep.cs" />
     <Compile Include="Assets\FMODJump.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />

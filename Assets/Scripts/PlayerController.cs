@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour {
     Rigidbody2D rb;
 
     void Start() {
+        isIdle = false;
         playerScale = transform.localScale.x;
         isJumping = false;
         rb = GetComponent<Rigidbody2D>();

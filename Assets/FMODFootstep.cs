@@ -15,15 +15,13 @@ public class FMODFootstep : MonoBehaviour {
         } else {
             isRunning = false;
         }
-        if (isRunning) {
-            if (Input.GetKeyDown(KeyCode.LeftShift)) {
-                CancelInvoke("CallFootsteps");
-                InvokeRepeating("CallFootsteps", 0, playerSpeed);
-            }
+        if (Input.GetKeyDown(KeyCode.LeftShift)) {
+            CancelInvoke("CallFootsteps");
+            InvokeRepeating("CallFootsteps", 0, .25f);
         }
         if (Input.GetKeyUp(KeyCode.LeftShift)) {
             CancelInvoke("CallFootsteps");
-            InvokeRepeating("CallFootsteps", 0, playerSpeed);
+            InvokeRepeating("CallFootsteps", 0, .5f);
         }
         if (!GetComponent<PlayerController>().isJumpUp || !GetComponent<PlayerController>().isJumpDown) {
             isRunning = false;
@@ -37,7 +35,7 @@ public class FMODFootstep : MonoBehaviour {
     void Start() {
         playerSpeed = .5f;
         isRunning = false;
-        InvokeRepeating("CallFootsteps", 0, playerSpeed);
+        InvokeRepeating("CallFootsteps", 0, .5f);
     }
 
     void onDisable() {

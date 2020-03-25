@@ -10,7 +10,8 @@ public class FMODJump : MonoBehaviour
     public float jumpForce;
 
     void CallJump() {
-        if(isJumping) {
+        if((GetComponent<PlayerController>().isIdle && GetComponent<PlayerController>().isRunning) || !GetComponent<PlayerController>().isJumpUp ||
+            !GetComponent<PlayerController>().isJumpDown) {
             FMODUnity.RuntimeManager.PlayOneShot(inputsound);
         }
     }

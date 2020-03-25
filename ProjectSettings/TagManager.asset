@@ -42,11 +42,11 @@ TagManager:
   - name: Fire
     uniqueID: 3804908061
     locked: 0
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Background1
     uniqueID: 1788664645
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: Player
     uniqueID: 106109733

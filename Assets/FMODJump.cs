@@ -10,9 +10,8 @@ public class FMODJump : MonoBehaviour
     public float jumpForce;
 
     void CallJump() {
-        if((GetComponent<PlayerController>().isIdle && GetComponent<PlayerController>().isRunning) || !GetComponent<PlayerController>().isJumpUp ||
-            !GetComponent<PlayerController>().isJumpDown) {
-            FMODUnity.RuntimeManager.PlayOneShot(inputsound);
+        if((!GetComponent<PlayerController>().isJumpUp && GetComponent<Rigidbody2D>().velocity.y-.01f>0)) {
+            StartCoroutine(callJumpSounds());
         }
     }
     void Start() {
@@ -22,5 +21,11 @@ public class FMODJump : MonoBehaviour
 
     void onDisable() {
         isJumping = false;
+    }
+
+    IEnumerator callJumpSounds() {
+        FMODUnity.RuntimeManager.PlayOneShot(inputsound);
+        yield return new WaitForSeconds(.835f);
+        FMODUnity.RuntimeManager.PlayOneShot(inputsound);
     }
 }

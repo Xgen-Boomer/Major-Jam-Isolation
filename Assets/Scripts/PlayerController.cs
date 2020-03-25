@@ -90,8 +90,8 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
-        if(!onGround && rb.velocity.y<0) {
-            if(isJumpDown) {
+        if(rb.velocity.y<0) {
+            if(isJumpDown && !isJumpUp) {
                 GetComponent<RobotAnimation>().goJumpDown();
             }
         }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class FMODFootstep : MonoBehaviour {
     [FMODUnity.EventRef]
     public string inputsound;
-    bool isRunning;
+    public bool isRunning;
     public float playerSpeed;
 
     void Update() {

@@ -919,7 +919,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2
-  spawnPoint: {fileID: 0}
+  spawnPoint: {x: -3.48, y: -3.35, z: 0.3}
   ground: {fileID: 0}
   deathPanel: {fileID: 0}
   deathType: 
@@ -936,6 +936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputsound: event:/Footsteps
+  isRunning: 0
   playerSpeed: 0.5
 --- !u!114 &8073237592113098669
 MonoBehaviour:

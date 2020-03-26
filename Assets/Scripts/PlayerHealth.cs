@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour {
 
     public float health = 2;
-    public GameObject spawnPoint;
+    public Vector3 spawnPoint = new Vector4(-3.48f, -3.35f, .3f);
     public Transform ground;
     public GameObject deathPanel;
     bool spawned = true;
@@ -13,8 +13,9 @@ public class PlayerHealth : MonoBehaviour {
     public string deathType = "";
 
     private void Start() {
+        spawnPoint = new Vector3(transform.position.x, transform.position.y, transform.localScale.x);
+        Debug.Log(spawnPoint);
         deathPanel = GameObject.Find("DeathPanel");
-        spawnPoint = GameObject.Find("PlayerSpawnPoint");
         health = 2;
     }
 
@@ -22,6 +23,7 @@ public class PlayerHealth : MonoBehaviour {
         if(health<=0) {
             if(spawned) {
                 StartCoroutine(playDeathSound());
+                deathPanel.SetActive(true);
                 spawned = false;
             }
         }
@@ -41,9 +43,10 @@ public class PlayerHealth : MonoBehaviour {
     }
 
     public void resetPlayer() {
-        deathType = "";
-        transform.position = spawnPoint.transform.position;
         health = 2;
+        transform.position = new Vector2(spawnPoint.x, spawnPoint.y);
+        transform.localScale = new Vector2(spawnPoint.z, spawnPoint.z);
+        deathType = "";
         spawned = true;
     }
 }

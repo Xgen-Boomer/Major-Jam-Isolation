@@ -41,6 +41,18 @@ public class PlayerController : MonoBehaviour {
     }
 
     void Update() {
+        if(GetComponent<PlayerHealth>().health<=0) {
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            isIdle = true;
+            isRunning = true;
+            isJumpUp = true;
+            isJumpDown = true;
+            GetComponent<FMODJump>().isJumping = false;
+            GetComponent<FMODFootstep>().isRunning = false;
+        } else {
+            rb.constraints = RigidbodyConstraints2D.None;
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        }
         onGround = Physics2D.OverlapCircle(feet.position, checkRadius, ground);
 
         if (Input.GetAxisRaw("Horizontal") > 0) {

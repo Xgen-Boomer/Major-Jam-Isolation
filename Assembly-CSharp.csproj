@@ -147,6 +147,7 @@
     <None Include="Assets\EffectExamples\Misc Effects\Prefabs\Readme_Dissolve_Respawn_.txt" />
     <None Include="Assets\FMOD\isolation\Metadata\EventFolder\{967c71ca-6bc5-4780-8073-2a7c7125d3ab}.xml" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\FMOD\isolation\Metadata\Event\{b18a5319-e71d-4e00-89c0-ebaf4ee6e21c}.xml" />
     <None Include="Assets\FMOD\isolation\Metadata\SnapshotGroup\{4713e92a-7ec1-4af6-b6f5-f2c6938e2169}.xml" />
     <None Include="Assets\EffectExamples\Magic Effects\Shaders\Ice.shader" />
     <None Include="Assets\FMOD\isolation\Metadata\Event\{0a9af98d-1821-4932-adfb-26cc3aa1b080}.xml" />

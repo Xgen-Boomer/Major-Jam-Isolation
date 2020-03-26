@@ -2356,5 +2356,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84cc6f1d4ef57924ab8493f6c6a18bd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputsound: 
+  inputsound: event:/DeathSound
   playerSpeed: 0.5
